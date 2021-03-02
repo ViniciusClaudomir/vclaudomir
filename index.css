@@ -1,4 +1,90 @@
 body{
+    margin: auto;
+    padding: auto;
+    background-color: rgb(73, 73, 73);
+}
 
+.contuedo{
+    display:  grid;
+    grid-template-columns: 1fr auto auto auto;
+    grid-template-rows: 1fr auto auto auto;
+
+    grid-template-areas: 
+    'h1 h1 h1 h1 h1'
+    'h2 h2 h2 h2 h2'
+    'h3 h3 h3 h3 h3'
+    'h4 h4 h4 h4 h4'
+    'h5 h5 h5 h5 h5';
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: h1;
+    background-color: #4bebad;
+    width: 100%;
+    height: 40px;
+}
+
+.label-bordered:hover{background-color: #49e0a6;}
+
+.label-bordered {
+    background-color: #4bebad;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ input[type="file"] { 
+    display: none; 
+ }
+ 
+ .c-loader {
+    animation: is-rotating 0.8s infinite;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #e5e5e5	;
+    border-top-color: #4bebad;
+    
+  }
+
+
+
+@keyframes is-rotating {
+    
+    to {
+      transform: rotate(1turn)
+    }
+    
+  }
+  div.bola {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
     background-color: black;
+    opacity: 0.6;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity= 19);
+    filter: alpha(opacity= 19);
+}
+
+
+.c-content {
+    text-align: center;
+    color: #4bebad;
+    position: fixed;
+    font-size: 45px;
+
+    
+}
+.c-content > p {
+    margin: 0;
+}
+.kit{
+    height: 155px;
+
 }
